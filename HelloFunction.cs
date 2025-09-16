@@ -10,7 +10,7 @@ namespace AzFunctionDemo
     {
         [FunctionName("HelloFunction")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]
+            [Microsoft.Azure.Functions.Worker.HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]
                 HttpRequest req,
             ILogger log)
         {
